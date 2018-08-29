@@ -63,7 +63,7 @@
 			$post_date = $row['post_date'];
 
 			echo "<tr>";
-			echo "<td>$post_id</td>";
+			echo "<td style='text-align:center;'>$post_id</td>";
 			echo "<td>$post_author</td>";
 			echo "<td>$post_title</td>";
 			echo "<td style='text-align:center;'>$post_category</td>";
