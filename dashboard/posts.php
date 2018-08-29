@@ -22,6 +22,7 @@ include "includes/admin-footer.php";
 				<!-- Page Heading -->
 				<div class="row">
 						<?php
+						$source = " "; // Defining the $source variable to remove erros
 						if(isset($_GET['source'])){
 							$source = $_GET['source'];
 						}
