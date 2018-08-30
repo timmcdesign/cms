@@ -9,12 +9,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/learning/cms/index.php">Company Name</a>
+				<a class="navbar-brand" href="../index.php">Company Name</a>
 			</div>
 
 			<!-- Top Menu Items -->
 			<ul class="nav navbar-right top-nav">
-				<li><a href="/learning/cms/index.php">Homepage</a></li>
+				<li><a href="../index.php">Homepage</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle burger-menu" data-toggle="dropdown"><i class="fas fa-bars fa-lg"></i></a>
 					<ul class="dropdown-menu">
@@ -48,10 +48,10 @@
 						</ul>
 					</li>
 					<li>
-						<a href="/learning/cms/dashboard/categories.php"><i class="fas fa-layer-group"></i>Catagories</a>
+						<a href="../dashboard/categories.php"><i class="fas fa-layer-group"></i>Catagories</a>
 					</li>
 					<li class="">
-						<a href="/learning/cms/dashboard/comments.php"><i class="fas fa-comment"></i>Comments</a>
+						<a href="../dashboard/comments.php"><i class="fas fa-comment"></i>Comments</a>
 					</li>
 					<li>
 						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fas fa-users"></i>Users <i class="fa fa-fw fa-caret-down"></i></a>
@@ -65,7 +65,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="/learning/cms/dashboard/profile.php"><i class="fas fa-user"></i>Profile</a>
+						<a href="../dashboard/profile.php"><i class="fas fa-user"></i>Profile</a>
 					</li>
 				</ul>
 			</div>
