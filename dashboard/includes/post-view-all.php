@@ -12,10 +12,10 @@
 			<th width="40" style="text-align:center;">Id</th>
 			<th width="95" style="text-align:center;">Author</th>
 			<th>Title</th>
-			<th width="60" style="text-align:center;">Category</th>
+			<th width="125" style="text-align:center;">Category</th>
 			<th width="60" style="text-align:center;">Status</th>
 			<th width="125" style="text-align:center;">Featured Image</th>
-			<th style='text-align:center;'>Tags</th>
+			<th width="80" style='text-align:center;'>Tags</th>
 			<th width="95" style="text-align:center;">Comments</th>
 			<th width="90" style="text-align:center;">Date</th>
 		</tr>
@@ -72,7 +72,7 @@
 			// <img src='../images/$post_image' width='auto' style='max-width:180px;' class='img-responsive' alt='$post_image'/ >
 			echo "<td style='text-align:center;'>$post_tags</td>";
 			echo "<td style='text-align:center;'>$post_comments</td>";
-			echo "<td>$post_date</td>";
+			echo "<td width='95' style='text-align:center';>$post_date</td>";
 			echo "<th width='45'><a class='' href='posts.php?source=edit_post&post=${post_id}'>Edit</a></td>";
 			echo "<th width='60'><a class='text-danger' onclick='return deleteConfirmation()' href='posts.php?delete={$post_id}'>Delete</a></td>";
 			echo "</tr>";
