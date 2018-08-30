@@ -8,7 +8,7 @@
 	//	and uses a functon that capitalizes the constant values
 
 $db["db_host"] = "localhost";
-$db["db_user"] = "root";
+$db["db_user"] = "cms";
 $db["db_pass"] = "H951vXQ3grP1MWfM";
 $db["db_name"] = "cms";
 
