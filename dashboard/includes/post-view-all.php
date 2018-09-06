@@ -66,7 +66,17 @@
 			echo "<td style='text-align:center;'>$post_id</td>";
 			echo "<td>$post_author</td>";
 			echo "<td>$post_title</td>";
-			echo "<td style='text-align:center;'>$post_category</td>";
+
+			// Query to pull the category name instead of category number
+
+			$query = "SELECT * FROM categories WHERE cat_id = $post_category ";
+			$select_all_category_id = mysqli_query($connection,$query);
+			while($row = mysqli_fetch_array($select_all_category_id)){
+				$cat_id = $row['cat_id'];
+				$cat_title = $row['cat_title'];
+			}
+
+			echo "<td style='text-align:center;'>$cat_title</td>";
 			echo "<td style='text-align:center;'>$post_status</td>";
 			echo "<td align='center'><a href='../images/$post_image' target='_blank'>View Image</a></td>";
 			// <img src='../images/$post_image' width='auto' style='max-width:180px;' class='img-responsive' alt='$post_image'/ >
