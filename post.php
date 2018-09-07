@@ -1,243 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Blog Post - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/blog-post.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
+<?php
+	include 'includes/db.php';
+	include 'includes/header.php';
+?>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+	<?php
 
-    <!-- Page Content -->
-    <div class="container">
+		include 'includes/navigation.php'
 
-        <div class="row">
+	 ?>
 
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+	<!-- Page Content -->
+	<div class="post container">
 
-                <!-- Blog Post -->
+		<div class="row">
 
-                <!-- Title -->
-                <h1>Blog Post Title</h1>
+			<!-- Blog Entries Column -->
+			<div class="col-md-8">
 
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
-                </p>
+				<?php
 
-                <hr>
+				if(isset($_GET['p_id'])){
+					$post_id = $_GET['p_id'];
+				}
 
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+					//	This Query is selecting all post data, that matches to the post_id from p_id via GET
 
-                <hr>
+					$query = "SELECT * FROM posts WHERE post_id = $post_id";
+					$select_all_posts_query = mysqli_query($connection,$query);
 
-                <!-- Preview Image -->
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+					while($row = mysqli_fetch_array($select_all_posts_query)){
+						$post_title = $row['post_title'];
+						$post_author = $row['post_author'];
+						$post_date = $row['post_date'];
+						$post_image = $row['post_image'];
+						$post_content = $row['post_content'];
+					?>
 
-                <hr>
+					<!-- First Blog Post -->
 
-                <!-- Post Content -->
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+					<!--	Images are not saved to a database, as this would take to much space.
+							So in order to have images from posts stored in the database, save the image name to the post!
+							This is so we can call the image name in the src link in the img tag.
+							If the image name changes however it will break unless updated in the database.
+							This needs to be remembered when building the admin panel with image name change functaionality.
+							The name of the image is then echo'ed in the image path!	See Below!! 	-->
 
-                <hr>
+					<img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
 
-                <!-- Blog Comments -->
+					<h2><?php echo $post_title; ?></h2>
 
-                <!-- Comments Form -->
-                <div class="well">
-                    <h4>Leave a Comment:</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+					<p class="">by <a href="index.php"><?php echo $post_author; ?></a> | Posted <?php echo $post_date; ?></p>
 
-                <hr>
+					<hr>
 
-                <!-- Posted Comments -->
+					<p class="post-body"><?php echo $post_content; ?></p>
 
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
-                </div>
+					<a class="btn btn-secondary admin-back" onclick="goBack()">&lt; Go Back</a>
 
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment -->
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-                        <!-- End Nested Comment -->
-                    </div>
-                </div>
+					<hr>
 
-            </div>
+					<?php
+						//	Here is where the while loop is turned off!!!!
+						}
+					 ?>
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+					 <!-- Blog Comments -->
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
+					 <!-- Comments Form -->
+					 <div class="well">
+					 	<h4>Leave a Comment:</h4>
+					 	<form role="form">
+					 		<div class="form-group">
+					 			<textarea class="form-control" rows="3"></textarea>
+					 		</div>
+					 		<button type="submit" class="btn btn-primary">Submit</button>
+					 	</form>
+					 </div>
 
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
+					 <hr>
 
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+					 <!-- Posted Comments -->
 
-            </div>
+					 <!-- Comment -->
+					 <div class="media">
+					 	<a class="pull-left" href="#">
+					 		<img class="media-object" src="http://placehold.it/64x64" alt="">
+					 	</a>
+					 	<div class="media-body">
+					 		<h4 class="media-heading">Start Bootstrap
+					 			<small>August 25, 2014 at 9:30 PM</small>
+					 		</h4>
+					 		Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+					 	</div>
+					 </div>
 
-        </div>
-        <!-- /.row -->
+					 <!-- Comment -->
+					 <div class="media">
+					 	<a class="pull-left" href="#">
+					 		<img class="media-object" src="http://placehold.it/64x64" alt="">
+					 	</a>
+					 	<div class="media-body">
+					 		<h4 class="media-heading">Start Bootstrap
+					 			<small>August 25, 2014 at 9:30 PM</small>
+					 		</h4>
+					 		Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+					 		<!-- Nested Comment -->
+					 		<div class="media">
+					 			<a class="pull-left" href="#">
+					 				<img class="media-object" src="http://placehold.it/64x64" alt="">
+					 			</a>
+					 			<div class="media-body">
+					 				<h4 class="media-heading">Nested Start Bootstrap
+					 					<small>August 25, 2014 at 9:30 PM</small>
+					 				</h4>
+					 				Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+					 			</div>
+					 		</div>
+					 		<!-- End Nested Comment -->
+					 	</div>
+					 </div>
 
-        <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+			</div>
 
-    </div>
-    <!-- /.container -->
+			<!-- Blog Sidebar Widgets Column -->
+			<?php
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+			include 'includes/blog-sidebar.php';
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+			 ?>
 
-</body>
+		</div>
+		<!-- /.row -->
 
-</html>
+		<hr>
+<?php
+
+include 'includes/footer.php';
+
+ ?>

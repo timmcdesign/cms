@@ -12,6 +12,12 @@ footer {
 	margin: 50px 0;
 }
 
-.sidebar{
-	margin-top: 109px;
+.home, .post {
+	margin-top:50px;
+}
+
+.post-body{
+	line-height: 1.8em;
+	font-size: 15px;
+	margin-bottom: 20px;
 }

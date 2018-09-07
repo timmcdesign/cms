@@ -12,14 +12,12 @@
 	 ?>
 
 	<!-- Page Content -->
-	<div class="container">
+	<div class="home container">
 
 		<div class="row">
 
 			<!-- Blog Entries Column -->
 			<div class="col-md-8">
-
-				<h1 class="page-header">Welcome<small> - The Latest News</small>
 				</h1>
 
 				<?php
@@ -34,6 +32,7 @@
 
 					while($row = mysqli_fetch_array($select_all_posts_query)){
 						$post_title = $row['post_title'];
+						$post_id = $row['post_id'];
 						$post_author = $row['post_author'];
 						$post_date = $row['post_date'];
 						$post_image = $row['post_image'];
@@ -47,15 +46,19 @@
 							This is so we can call the image name in the src link in the img tag.
 							If the image name changes however it will break unless updated in the database.
 							This needs to be remembered when building the admin panel with image name change functaionality.
-							The name of the image is then echo'ed in the image path!	See Below!! 	-->
+							The name of the image is then echo'ed in the image path!	See Below!!
 
-					<img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
+							Note: Links have been added to the image and titles to link to post.php
+							These links use GET post_id to display content form the table specific to that post on the post.php page -->
 
-					<h2><a href="#"><?php echo $post_title; ?></a></h2>
-					<p class="lead">by <a href="index.php"><?php echo $post_author; ?></a> | Posted <?php echo $post_date; ?></p>
+
+					<a href="post.php?p_id=<?php echo $post_id; ?>"><img class="img-responsive" src="images/<?php echo $post_image; ?>" alt=""></a>
+
+					<h2><a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title; ?></a></h2>
+					<p class="">by <a href="index.php"><?php echo $post_author; ?></a> | Posted <?php echo $post_date; ?></p>
 					<hr>
-					<p><?php echo $post_content; ?></p>
-					<a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+					<p class="post-body"><?php echo $post_content; ?></p>
+					<a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
 					<hr>
 
