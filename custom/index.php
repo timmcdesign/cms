@@ -232,54 +232,54 @@
 		<footer>
 			<div class="container">
 				<div class="row text-center text-xs-center text-sm-left text-md-left">
-					<div class="col-xs-12 col-sm-2 col-md-2">
-						<h5>Menu links</h5>
+					<div class="col-xs-12 col-sm-2 col-md-3">
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-3">
-						<h5>Get Support</h5>
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-3">
-						<h5 class="none">&nbsp;</h5>
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-3">
-						<h5 class="none">&nbsp;</h5>
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
-							<li><a href="">Lorem ipsum</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
+							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white copyright">
-						<p>&copy; The Salvation Army 2018 &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Use</a> &middot; <a href="../custom/dashboard/index.php">Admin Login</a></p>
+						<p>&copy; The Salvation Army 2018 &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Use</a> &middot; <a href="../custom/dashboard/index.html">Admin Login</a></p>
 					</div>
 					</hr>
 				</div>
