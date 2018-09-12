@@ -232,8 +232,8 @@
 		<footer>
 			<div class="container">
 				<div class="row text-center text-xs-center text-sm-left text-md-left">
-					<div class="col-xs-12 col-sm-2 col-md-2">
-						<h5>Menu links</h5>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum</a></li>
 							<li><a href="">Lorem ipsum</a></li>
@@ -243,8 +243,8 @@
 							<li><a href="">Lorem ipsum</a></li>
 						</ul>
 					</div>
-					<div class="col-xs-12 col-sm-5 col-md-3">
-						<h5>Get Support</h5>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum</a></li>
 							<li><a href="">Lorem ipsum</a></li>
@@ -254,8 +254,8 @@
 							<li><a href="">Lorem ipsum</a></li>
 						</ul>
 					</div>
-					<div class="col-xs-12 col-sm-5 col-md-3">
-						<h5 class="none">&nbsp;</h5>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum</a></li>
 							<li><a href="">Lorem ipsum</a></li>
@@ -265,8 +265,8 @@
 							<li><a href="">Lorem ipsum</a></li>
 						</ul>
 					</div>
-					<div class="col-xs-12 col-sm-5 col-md-3">
-						<h5 class="none">&nbsp;</h5>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum</a></li>
 							<li><a href="">Lorem ipsum</a></li>
