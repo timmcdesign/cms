@@ -57,7 +57,6 @@
 			$comment_content = substr($row['comment_content'],0,50);
 			$comment_email = $row['comment_email'];
 			$comment_status = $row['comment_status'];
-			$comment_status = $row['comment_status'];
 			$comment_date = $row['comment_date'];
 
 			echo "<tr>";
@@ -66,12 +65,12 @@
 
 			// Query to pull the category name instead of category number
 
-			$query = "SELECT * FROM categories WHERE cat_id = $comment_category ";
+			/* $query = "SELECT * FROM categories WHERE cat_id = $comment_category ";
 			$select_all_category_id = mysqli_query($connection,$query);
 			while($row = mysqli_fetch_array($select_all_category_id)){
 				$cat_id = $row['cat_id'];
 				$cat_content = $row['cat_content'];
-			}
+			} */ 
 
 			echo "<td style='text-align:left;'>$comment_content</td>";
 			echo "<td style='text-align:left;'><a href='mailto:$comment_email?subject=Response to Comment'>$comment_email</a></td>";

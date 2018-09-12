@@ -232,11 +232,8 @@
 		<footer>
 			<div class="container">
 				<div class="row text-center text-xs-center text-sm-left text-md-left">
-<<<<<<< HEAD
-					<div class="col-xs-12 col-sm-2 col-md-3">
-=======
+
 					<div class="col-xs-12 col-sm-6 col-md-3">
->>>>>>> 57a38bf5aca68022f93d89f9f07deab3795be01d
 						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
@@ -247,11 +244,7 @@
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
-<<<<<<< HEAD
-					<div class="col-xs-12 col-sm-5 col-md-3">
-=======
 					<div class="col-xs-12 col-sm-6 col-md-3">
->>>>>>> 57a38bf5aca68022f93d89f9f07deab3795be01d
 						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
@@ -262,11 +255,7 @@
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
-<<<<<<< HEAD
-					<div class="col-xs-12 col-sm-5 col-md-3">
-=======
 					<div class="col-xs-12 col-sm-6 col-md-3">
->>>>>>> 57a38bf5aca68022f93d89f9f07deab3795be01d
 						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
@@ -277,11 +266,7 @@
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
 						</ul>
 					</div>
-<<<<<<< HEAD
-					<div class="col-xs-12 col-sm-5 col-md-3">
-=======
 					<div class="col-xs-12 col-sm-6 col-md-3">
->>>>>>> 57a38bf5aca68022f93d89f9f07deab3795be01d
 						<h5>Lorem ipsum</h5>
 						<ul class="list-unstyled footer-links">
 							<li><a href="">Lorem ipsum dolor sit amet</a></li>
