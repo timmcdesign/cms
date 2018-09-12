@@ -1,5 +1,5 @@
 <div class="col-lg-12 admin-header">
-<h1 class="page-header">All Post</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
+<h1 class="page-header">Post</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 
 	<?php if (isset($_GET['delete'])) {
 		echo "<div class='alert alert-success' role='alert'>Post Successfully Deleted</div>";}

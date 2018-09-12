@@ -57,10 +57,10 @@
 						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fas fa-users"></i>Users <i class="fa fa-fw fa-caret-down"></i></a>
 						<ul id="demo" class="collapse">
 							<li>
-								<a href=".php">Dropdown Item</a>
+								<a href="../dashboard/users.php">Dropdown Item</a>
 							</li>
 							<li>
-								<a href=".php">Dropdown Item</a>
+								<a href="../dashboard/users.php">Dropdown Item</a>
 							</li>
 						</ul>
 					</li>

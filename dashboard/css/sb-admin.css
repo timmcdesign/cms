@@ -128,8 +128,16 @@ ul.alert-dropdown {
 	.side-nav li a:hover,
 	.side-nav li a:focus {
 		outline: none;
-		background-color: #000 !important;
+		background-color: #111 !important;
 	}
+}
+
+.side-nav .collapse{
+	background: #343434;
+}
+
+.navbar-nav .collapse li{
+	border-bottom:1px solid #222;
 }
 
 .side-nav>li>ul {

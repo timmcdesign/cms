@@ -4,13 +4,16 @@ include "includes/admin-header.php";
 include "includes/admin-footer.php";
 
 ?>
+
+<script language="JavaScript" type="text/javascript" src="includes/admin-scripts.js"></script>
+
 <body>
 
 	<div id="wrapper">
 
 		<?php
-        include	"includes/admin-navigation.php";
-        ?>
+		include	"includes/admin-navigation.php";
+		?>
 
 		<div id="page-wrapper">
 
@@ -18,8 +21,28 @@ include "includes/admin-footer.php";
 
 				<!-- Page Heading -->
 				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="page-header">Comments</h1>
+						<?php
+						$source = " "; // Defining the $source variable to remove erros
+						if(isset($_GET['source'])){
+							$source = $_GET['source'];
+						}
+
+						else {
+						}
+							switch($source) {
+								case 'add_post':
+									include "../dashboard/includes/post-add.php";
+									break;
+
+								case 'edit_post':
+									include "../dashboard/includes/post-edit.php";
+									break;
+
+								default :
+									include '../dashboard/includes/comments-view-all.php';
+									break;
+								}
+						 ?>
 
 						<!-- Categories Form  -->
 						<div class="col-xs-6">
