@@ -65,7 +65,7 @@
 			echo "<tr>";
 			echo "<td style='text-align:center;'>$post_id</td>";
 			echo "<td>$post_author</td>";
-			echo "<td>$post_title</td>";
+			echo "<td><a href='../post.php?p_id=$post_id'>$post_title</a></td>";
 
 			// Query to pull the category name instead of category number
 

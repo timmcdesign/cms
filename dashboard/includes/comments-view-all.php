@@ -24,24 +24,43 @@
 
 		<?php
 
-		//	 This is the php that triggers the Delete link to delete the comment form the comment table in the db
+		//	 This is the php that triggers the deletion of a comment in the db and front end of the site
+
 		if (isset($_GET['delete'])) {
 			$comment_id = $_GET['delete'];
 			$query = "DELETE FROM comments WHERE comment_id = $comment_id";
+			$delete_comment_query = mysqli_query($connection, $query);
+			header("location:comments.php");
 
-			$delete_query = mysqli_query($connection, $query);
+			//	This query will incrementaly decrease the comment count each time a comment is deleted
+			//	This will need to be replicated for creating comments
+
+			//		$query = "UPDATE post SET post_comment_count = post_comment_count - 1 WHERE post_id = $the_post_id";
+			//		$update_comment_count = mysqli_query($connection,$query);
+
+			}
+
+		//	 This is the php that triggers the approval of a comment in the db and front end of the site
+
+		if (isset($_GET['approve'])) {
+
+			$comment_id = $_GET['approve'];
+			$query = "UPDATE comments SET comment_status = 'Approved' WHERE comment_id = $comment_id";
+			$approve_comment_query = mysqli_query($connection, $query);
+			header("location:comments.php");
 		}
 
-		//	 This is the php that triggers the Edit link to delete the comment form the comment table in the db
-		if (isset($_GET['edit'])) {
+		//	 This is the php that triggers the rejection of a comment in the db and front end of the site
 
-			$comment_id = $_GET['edit'];
-			$query = "UPDATE * WHERE comment_id = $comment_id";
+		if (isset($_GET['reject'])) {
 
-			$edit_query = mysqli_query($connection, $query);
+			$comment_id = $_GET['reject'];
+			$query = "UPDATE comments SET comment_status = 'Rejected' WHERE comment_id = $comment_id";
+			$reject_comment_query = mysqli_query($connection, $query);
+			header("location:comments.php");
 		}
 
-		 ?>
+		?>
 
 		<?php
 
@@ -70,11 +89,29 @@
 			while($row = mysqli_fetch_array($select_all_category_id)){
 				$cat_id = $row['cat_id'];
 				$cat_content = $row['cat_content'];
-			} */ 
+			} */
 
 			echo "<td style='text-align:left;'>$comment_content</td>";
 			echo "<td style='text-align:left;'><a href='mailto:$comment_email?subject=Response to Comment'>$comment_email</a></td>";
-			echo "<td>$comment_post_id</td>";
+
+			// This is PHP that pulls the name of the post the comment is in - using the post_comment_id
+			// Included is an statment, that will let users know if the comment is redundant, based on the post_id being missing in the DB (deleted)
+
+			$query = "SELECT * FROM posts WHERE post_id = $comment_post_id";
+			$select_post_id_query = mysqli_query($connection, $query);
+
+				while($row = mysqli_fetch_array($select_post_id_query)){
+					$post_id = $row['post_id'];
+					$post_title = $row['post_title'];
+				}
+				if(!$post_id){
+					$post_title = 'No longer exists';
+					echo "<td style='color:#bbb;'>$post_title</td>";
+				}
+				else {
+					echo "<td><a href='../post.php?p_id=$post_id'>$post_title</a></td>";
+				}
+
 			echo "<td width='100' style='text-align:center;'>$comment_status</td>";
 			echo "<td width='105' style='text-align:center';>$comment_date</td>";
 			echo "<th width='190' style='text-align:center';>
