@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="../index.php">Company Name</a>
+				<p class="navbar-brand" style="color:#fff;"> Admin Panel</p>
 			</div>
 
 			<!-- Top Menu Items -->
@@ -40,10 +40,10 @@
 						<a href="javascript:;" data-toggle="collapse" data-target="#post_dropdown"><i class="fas fa-file"></i>Posts <i class="fa fa-fw fa-caret-down"></i></a>
 						<ul id="post_dropdown" class="collapse">
 							<li>
-								<a href="posts.php?source=add_post">New Post</a>
+								<a href="posts.php?source=none">View Posts</a>
 							</li>
 							<li>
-								<a href="posts.php?source=none">View Posts</a>
+								<a href="posts.php?source=add_post">New Post</a>
 							</li>
 						</ul>
 					</li>
@@ -57,10 +57,10 @@
 						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fas fa-users"></i>Users <i class="fa fa-fw fa-caret-down"></i></a>
 						<ul id="demo" class="collapse">
 							<li>
-								<a href="../dashboard/users.php">Dropdown Item</a>
+								<a href="../dashboard/users.php">View Users</a>
 							</li>
 							<li>
-								<a href="../dashboard/users.php">Dropdown Item</a>
+								<a href="../dashboard/users.php?source=add">New User</a>
 							</li>
 						</ul>
 					</li>

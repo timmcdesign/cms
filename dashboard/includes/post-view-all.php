@@ -18,6 +18,7 @@
 			<th width="80" style='text-align:center;'>Tags</th>
 			<th width="95" style="text-align:center;">Comments</th>
 			<th width="90" style="text-align:center;">Date</th>
+			<th width="90" style="text-align:center;">Actions</th>
 		</tr>
 	</thead>
 
@@ -83,8 +84,9 @@
 			echo "<td style='text-align:center;'>$post_tags</td>";
 			echo "<td style='text-align:center;'>$post_comments</td>";
 			echo "<td width='95' style='text-align:center';>$post_date</td>";
-			echo "<th width='45'><a class='' href='posts.php?source=edit_post&post=${post_id}'>Edit</a></td>";
-			echo "<th width='60'><a class='text-danger' onclick='return deleteConfirmation()' href='posts.php?delete={$post_id}'>Delete</a></td>";
+			echo "<th width='110' style='text-align:center';>
+			<a class='' href='posts.php?source=edit_post&post=${post_id}'>Edit</a>&nbsp;&nbsp;
+			<a class='text-danger' onclick='return deleteConfirmation()' href='posts.php?delete={$post_id}'>Delete</a></td>";
 			echo "</tr>";
 		}
 

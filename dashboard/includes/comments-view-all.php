@@ -10,9 +10,9 @@
 	<thead>
 		<tr>
 			<th width="40" style="text-align:center;">Id</th>
-			<th width="95" style="text-align:center;">Author</th>
+			<th style="text-align:center;">Author</th>
 			<th style="text-align:left";>Message</th>
-			<th width="60" style="text-align:center;">Email Address</th>
+			<th>Email Address</th>
 			<th>Which Post</th>
 			<th width="70" style="text-align:center;">Status</th>
 			<th width="90" style="text-align:center;">Date</th>
@@ -80,7 +80,7 @@
 
 			echo "<tr>";
 			echo "<td style='text-align:center;'>$comment_id</td>";
-			echo "<td>$comment_author</td>";
+			echo "<td style='text-align:center;'>$comment_author</td>";
 
 			// Query to pull the category name instead of category number
 

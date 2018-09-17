@@ -27,6 +27,8 @@
 					//	The post content is in the while loop and echo with the varaibles
 					//	And the while loop is turned off after all of the html tags!!
 
+					// Note - Added conditon of only showing based on post_status condition in the DB
+
 					$query = "SELECT * FROM posts";
 					$select_all_posts_query = mysqli_query($connection,$query);
 
@@ -37,6 +39,10 @@
 						$post_date = $row['post_date'];
 						$post_image = $row['post_image'];
 						$post_content = substr($row['post_content'],0,180);	// This code limits the nuber of characters by 180
+						$post_status = $row['post_status'];
+
+
+						if($post_status == 'published'){
 					?>
 
 					<!-- First Blog Post -->
@@ -62,10 +68,14 @@
 
 					<hr>
 
-					<?php
+				<?php
 						//	Here is where the while loop is turned off!!!!
 						}
-					 ?>
+						else {
+							echo "No posts to display yet, please check back later.";
+						}
+					}
+				?>
 
 			</div>
 

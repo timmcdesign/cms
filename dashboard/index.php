@@ -24,7 +24,7 @@ include "includes/admin-header.php";
 						</h1>
 						<ol class="breadcrumb">
 							<li>
-								<i class="fas fa-tachometer-alt"></i>  <a href="index.html">Dashboard</a>
+								<i class="fas fa-tachometer-alt"></i>  <a href="../dashboard/index.php">Dashboard</a>
 							</li>
 							<li class="active">
 								<i class="fas fa-file"></i> Blank Page

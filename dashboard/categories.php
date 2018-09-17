@@ -37,7 +37,7 @@ include "includes/admin-footer.php";
 							<?php	// Update Categories = Found in includes folder
 
 								if(isset($_GET['edit'])){
-									include "includes/update_categories.php";
+									include "includes/category_update.php";
 								}
 							?>
 
@@ -48,8 +48,9 @@ include "includes/admin-footer.php";
 							<table class="table table-bordered">
 								<thead>
 									<tr>
-										<th>Id</th>
+										<th width='40' style='text-align:center;'>Id</th>
 										<th>Category Name</th>
+										<th style='text-align:center;'>Actions</th>
 									</tr>
 								</thead>
 								<tbody>

@@ -45,6 +45,10 @@ body {
 	padding: 0 15px;
 }
 
+.navbar-fixed-top{
+	height:52px;
+}
+
 .top-nav>li {
 	display: inline-block;
 	float: left;

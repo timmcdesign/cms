@@ -48,10 +48,11 @@
 			$cat_title = $row['cat_title'];
 
 			echo "<tr>";
-			echo "<td>{$cat_id}</td>";
+			echo "<td style='text-align:center;'>{$cat_id}</td>";
 			echo "<td>{$cat_title}</td>";
-			echo "<th width='60px'><a class='text-danger' href='categories.php?edit={$cat_id}'>Edit</a></td>";
-			echo "<th width='60px'><a class='text-danger' href='categories.php?delete={$cat_id}'>Delete</a></td>";
+			echo "<th width='110px' style='text-align:center;'>
+			<a href='categories.php?edit={$cat_id}'>Edit</a>&nbsp;&nbsp;
+			<a class='text-danger' href='categories.php?delete={$cat_id}'>Delete</a></td>";
 			echo "</tr>";
 		}
 	}
