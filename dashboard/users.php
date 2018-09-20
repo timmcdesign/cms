@@ -13,6 +13,7 @@ include "includes/admin-footer.php";
 
 		<?php
 		include	"includes/admin-navigation.php";
+
 		?>
 
 		<div id="page-wrapper">
