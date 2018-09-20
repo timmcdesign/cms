@@ -19,8 +19,6 @@
 		$create_user_query = mysqli_query($connection, $query);
 
 		confirmConnection($create_user_query);
-
-		echo "<pre>".print_r($query,true)."</pre>";
 	}
 
 ?>

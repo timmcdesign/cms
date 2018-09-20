@@ -1,6 +1,10 @@
 
 <?php
 
+//	Enable php warnings and errors
+
+	include_once ("../includes/php_config.php");
+
 //	This is required to buffer function requests used in scripts.
 
 ob_start(); ?>

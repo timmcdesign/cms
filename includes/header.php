@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+
+//	Enable php warnings and errors
+
+	include_once ("../includes/php_config.php");
+
+ ?>
 
 <head>
 

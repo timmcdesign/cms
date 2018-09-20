@@ -23,15 +23,12 @@
 
 		<?php
 
-		//	 This is the php that triggers the deletion of a user in the db and front end of the site
-
 		//	 This is the php that triggers the Delete link to delete the user form the user table in the db
 
-		if (isset($_GET['delete'])) {
-			$post_id = $_GET['delete'];
-			$query = "DELETE FROM users WHERE user_id = $post_id";
-
-			$delete_query = mysqli_query($connection, $query);
+		if($_GET['source'] == 'delete' && isset($_GET['user_id'])) {
+			$the_user_id = $_GET['user_id'];
+			$query = "DELETE FROM users WHERE user_id = $the_user_id";
+			$delete_user_query = mysqli_query($connection, $query);
 		}
 
 		//	 This is the php that triggers the Edit link to delete the user form the user table in the db
@@ -70,7 +67,7 @@
 				<table>
 					<tr>
 						<td width='30px'>
-							<a href='../images/$post_image' target='_blank'><img src='../images/$user_image' width='19' height='19' alt='$user_image'/ ></a>
+							<a href='../images/$user_image' target='_blank'><img src='../images/$user_image' width='19' height='19' alt='$user_image'/ ></a>
 						</td>
 						<td>
 							$user_first_name $user_last_name
