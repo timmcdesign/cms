@@ -31,7 +31,7 @@
 			<th>Email:</th>
 			<th width="120" style="text-align:center;">Role:</th>
 			<th width="120" style="text-align:center;">Date Created:</th>
-			<th width="300" style="text-align:center;">Actions</th>
+			<th width="315" style="text-align:center;">Actions</th>
 		</tr>
 	</thead>
 
@@ -123,7 +123,7 @@
 			<a onclick='return adminConfirmation()' href='users.php?source=admin&user_id={$user_id}'>Admin</a>&nbsp;&nbsp;
 			<a onclick='return editorConfirmation()' href='users.php?source=editor&user_id={$user_id}'>Editor</a>&nbsp;&nbsp;
 			<a onclick='return subscriberConfirmation()' href='users.php?source=subscriber&user_id={$user_id}'>Subscriber</a>&nbsp;&nbsp;
-			<a onclick='return' href='users.php?source=edit&user_id={$user_id}'>Edit</a>&nbsp;&nbsp;
+			<a onclick='return' href='users.php?source=edit&user_id={$user_id}'>Update</a>&nbsp;&nbsp;
 			<a onclick='return deleteConfirmation()' class='text-danger' href='users.php?source=delete&user_id={$user_id}'>Delete</a>
 			</td>";
 			echo "</tr>";

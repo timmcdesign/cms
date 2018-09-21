@@ -42,7 +42,7 @@
 ?>
 
 <div class="col-lg-9 admin-header">
-<h1 class="page-header">Edit user</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
+<h1 class="page-header">Update user</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 
 <?php if(isset($_POST['edit_user'])) {
 		echo "<div class='alert alert-success' role='alert'>User Successfully Updated</div>";
@@ -122,6 +122,6 @@
 	</div>
 	<div class="clearfix"></div>
 		<div class="form-group">
-			<input class="btn btn-primary" type="submit" name="edit_user" value="Edit User">
+			<input class="btn btn-primary" type="submit" name="edit_user" value="Update User">
 		</div>
 </form>
