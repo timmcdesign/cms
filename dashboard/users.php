@@ -23,12 +23,10 @@ include "includes/admin-footer.php";
 				<!-- Page Heading -->
 				<div class="row">
 						<?php
-						$source = " "; // Defining the $source variable to remove erros
-						if(isset($_GET['source'])){
-							$source = $_GET['source'];
-						}
+						$source = " ";	// Defining source to remove PHP warning
 
-						else {
+						if(isset($_GET['source'])) {
+							$source = $_GET['source'];
 						}
 							switch($source) {
 								case 'add':
@@ -39,7 +37,7 @@ include "includes/admin-footer.php";
 									include "../dashboard/includes/users-edit.php";
 									break;
 
-								default :
+								default:
 									include '../dashboard/includes/users-view-all.php';
 									break;
 								}

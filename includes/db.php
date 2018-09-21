@@ -7,40 +7,40 @@
 	//	Edwin actually suggests putting the constants into an array,
 	//	and uses a functon that capitalizes the constant values
 
-$db["db_host"] = "localhost";
-$db["db_user"] = "cms";
-$db["db_pass"] = "H951vXQ3grP1MWfM";
-$db["db_name"] = "cms";
+	$db["db_host"] = "localhost";
+	$db["db_user"] = "cms";
+	$db["db_pass"] = "H951vXQ3grP1MWfM";
+	$db["db_name"] = "cms";
 
-foreach($db as $key => $value){
+	foreach($db as $key => $value){
 
-define(strtoupper($key), $value);
+	define(strtoupper($key), $value);
 
-}
+	}
 
-$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-/*	Standard way to define consants that connect to a DB
+	/*	Standard way to define consants that connect to a DB
 
-define ("DB_HOST", "localhost");
-define ("DB_USER", "root");
-define ("DB_PASS", "H951vXQ3grP1MWfM");
-define ("DB_NAME", "cms");
+	define ("DB_HOST", "localhost");
+	define ("DB_USER", "root");
+	define ("DB_PASS", "H951vXQ3grP1MWfM");
+	define ("DB_NAME", "cms");
 
-$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-if($connection){
+	if($connection){
 
-	echo "Connected";
+		echo "Connected";
 
-}
+	}
 
-*/
+	*/
 
-/*	Default way of connecting to DB
+	/*	Default way of connecting to DB
 
-$connection = mysqli_connect('localhost','root','sw55tnes','cms');
+	$connection = mysqli_connect('localhost','root','sw55tnes','cms');
 
-*/
+	*/
 
  ?>

@@ -60,7 +60,7 @@
 			$post_status = $row['post_status'];
 			$post_image = $row['post_image'];
 			$post_tags = $row['post_tags'];
-			$post_comments = $row['post_comments'];
+			$post_comment_count = $row['post_comment_count'];
 			$post_date = $row['post_date'];
 
 			echo "<tr>";
@@ -82,7 +82,7 @@
 			echo "<td align='center'><a href='../images/$post_image' target='_blank'>View Image</a></td>";
 			// <img src='../images/$post_image' width='auto' style='max-width:180px;' class='img-responsive' alt='$post_image'/ >
 			echo "<td style='text-align:center;'>$post_tags</td>";
-			echo "<td style='text-align:center;'>$post_comments</td>";
+			echo "<td style='text-align:center;'>$post_comment_count</td>";
 			echo "<td width='95' style='text-align:center';>$post_date</td>";
 			echo "<th width='110' style='text-align:center';>
 			<a class='' href='posts.php?source=edit_post&post=${post_id}'>Edit</a>&nbsp;&nbsp;

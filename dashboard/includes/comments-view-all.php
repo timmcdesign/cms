@@ -109,7 +109,7 @@
 					echo "<td style='color:#bbb;'>$post_title</td>";
 				}
 				else {
-					echo "<td><a href='../post.php?p_id=$post_id'>$post_title</a></td>";
+					echo "<td><a href='../post.php?p_id=$post_id'>Post ${post_id} - $post_title</a></td>";
 				}
 
 			echo "<td width='100' style='text-align:center;'>$comment_status</td>";

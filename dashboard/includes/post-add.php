@@ -17,10 +17,8 @@
 		$query .= "VALUES ('{$post_title}', '{$post_author}', '{$post_category_id}', '{$post_status}', '{$post_image}', '{$post_tags}', '{$post_content}', '{$post_date}') ";
 
 		$create_post_query = mysqli_query($connection, $query);
-		
-		confirmConnection($create_post_query);
 
-		echo "<pre>".print_r($query,true)."</pre>";
+		confirmConnection($create_post_query);
 	}
 
 ?>
