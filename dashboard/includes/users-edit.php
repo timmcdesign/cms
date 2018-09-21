@@ -31,8 +31,8 @@
 
 		move_uploaded_file($user_image_temp, "../images/$user_image");
 
-		$query = "INSERT INTO users (user_name, user_first_name, user_last_name, user_email, user_password, user_role, user_image, user_date_created)";
-		$query .= " VALUES ('{$user_name}', '{$user_first_name}', '{$user_last_name}', '{$user_email}', '{$user_password}', '{$user_role}', '{$user_image}', '{$user_date_created}') ";
+		$query = "INSERT INTO users (user_name, user_first_name, user_last_name, user_email, user_password, user_role, user_image)
+		VALUES ('{$user_name}', '{$user_first_name}', '{$user_last_name}', '{$user_email}', '{$user_password}', '{$user_role}', '{$user_image}' ) ";
 
 		$create_user_query = mysqli_query($connection, $query);
 
@@ -91,7 +91,7 @@
 
 				<option value="admin" <?= ($user_role == 'admin' ? 'selected' : ''); ?>>Admin</option>
 				<option value="editor" <?= ($user_role == 'editor' ? 'selected' : ''); ?>>Editor</option>
-				<option value="subscriber" <?= ($user_role == 'subscriber' ? 'selected' : ''); ?>>Subscriber</option>
+				<option value="subscriber" <?= ($user_role == 'subscriber' ? 'selected' : 'disabled'); ?>>Subscriber</option>
 
 			</select>
 		</div>
@@ -117,6 +117,6 @@
 	</div>
 	<div class="clearfix"></div>
 		<div class="form-group">
-			<input class="btn btn-primary" type="submit" name=" " value="Edit User">
+			<input class="btn btn-primary" type="submit" name="edit_user" value="Edit User">
 		</div>
 </form>
