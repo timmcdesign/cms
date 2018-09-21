@@ -44,6 +44,11 @@
 <div class="col-lg-9 admin-header">
 <h1 class="page-header">Edit user</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 
+<?php if(isset($_POST['edit_user'])) {
+		echo "<div class='alert alert-success' role='alert'>User Successfully Updated</div>";
+	}
+?>
+
 <form class="create-user-form" action="" method="post" enctype="multipart/form-data">
 
 <!--  The enctype attribute specifies how form-dat	a should be encoded when submitted to your server  -->
