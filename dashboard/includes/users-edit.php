@@ -26,13 +26,27 @@
 		$user_password = $_POST['user_password'];
 		$user_role = $_POST['user_role'];
 
-		$user_image = $_FILES['image']['name'];
-		$user_image_temp = $_FILES['image']['tmp_name'];
+		$user_image = $_FILES['user-image']['name'];
+		$user_image_temp = $_FILES['user-image']['tmp_name'];
+		$user_old_image = $_POST['user-image-old'];
 
 		move_uploaded_file($user_image_temp, "../images/$user_image");
 
-		$query = "INSERT INTO users (user_name, user_first_name, user_last_name, user_email, user_password, user_role, user_image)
-		VALUES ('{$user_name}', '{$user_first_name}', '{$user_last_name}', '{$user_email}', '{$user_password}', '{$user_role}', '{$user_image}' ) ";
+		if(empty($user_image)){
+			$user_image = $user_old_image;
+		}
+
+		$query = "UPDATE users SET
+		user_name = '{$user_name}',
+		user_first_name = '{$user_first_name}',
+		user_last_name = '{$user_last_name}',
+		user_email = '{$user_email}',
+		user_password = '{$user_password}',
+		user_role = '{$user_role}',
+		user_image = '{$user_image}'
+		WHERE user_id = $the_user_id";
+
+		echo "<pre>".print_r($query,true)."</pre>";
 
 		$create_user_query = mysqli_query($connection, $query);
 
@@ -104,7 +118,8 @@
 	<img src='#' width='auto' style='max-width:19px;' class='img-responsive img-thumbnail' alt=''/ >
 		<div class="form-group">
 			<label for="user_image">Profile Picture:</label>
-			<input class="" type="file" name="image" value="">
+			<input class="" type="file" name="user-image" value="">
+			<input class="hidden" type="file" name="user-image-old" value="<?= $user_image; ?>">
 		</div>
 	<div class="clearfix"></div>
 	<hr />

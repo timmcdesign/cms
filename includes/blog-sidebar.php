@@ -25,12 +25,6 @@
 		</form>
 	</div>
 
-	<!-- Blog Categories Well
-
-
-
-	-->
-
 	<div class="well">
 		<h4>Blog Categories</h4>
 		<div class="row">
@@ -50,6 +44,23 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+
+	<!-- Login Form -->
+
+	<div class="well">
+		<h4>Account Login</h4>
+		<form action="includes/login.php" method="post">
+			<div class="form-group">
+				<input name="username" type="text" class="form-control" placeholder="Enter Username">
+			</div>
+			<div class="input-group">
+				<input name="password" type="password" class="form-control" placeholder="Enter Password">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="submit" name="login">Submit</button>
+				</span>
+			</div>
+		</form>
 	</div>
 
 	<!-- Side Widget Well -->
