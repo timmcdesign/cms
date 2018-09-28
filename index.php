@@ -72,7 +72,7 @@
 						//	Here is where the while loop is turned off!!!!
 						}
 						else {
-							echo "No posts to display yet, please check back later.";
+							// echo "No posts to display yet, please check back later.";
 						}
 					}
 				?>
