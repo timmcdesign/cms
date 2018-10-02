@@ -8,7 +8,7 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
-		//	Cleaning the username,e and passwords via escape string for possible injections
+		//	Cleaning the username and passwords via escape string for possible injections
 		$username = mysqli_real_escape_string($connection, $username);
 		$password = mysqli_real_escape_string($connection, $password);
 
@@ -24,7 +24,7 @@
 		//	Loop Where we validate the DB values for login functionality
 		while($row = mysqli_fetch_array($select_user_query)){
 			$db_user_id = $row['user_id'];
-			$db_user_name = $row['user_name'];
+			$db_username = $row['user_name'];
 			$db_user_first_name = $row['user_first_name'];
 		 	$db_user_last_name = $row['user_last_name'];
 		 	$db_user_email = $row['user_email'];
@@ -34,14 +34,14 @@
 
 		//	Validation Rules
 		if($username !== $db_username && $password !== $db_user_password ){
-			header("Location: ../index.php");
+			header('Location: ../index.php');
 		}
 		else if($username == $db_username && $password == $db_user_password ){
-			header('Location: http://www.example.com/');
+			header('Location: ../dashboard');
 		}
-		//	else{
-		//		header("Location: ../index.php");
-		//	}
+		else{
+			header('Location: ../index.php');
+		}
 
 	}
 
