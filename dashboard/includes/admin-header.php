@@ -11,6 +11,20 @@ ob_start(); ?>
 
 <?php
 
+//	This is to start a session for loged in users and check their user_role is valid
+
+session_start();
+
+if(isset($_SESSION['user_role'])){
+	if($_SESSION['user_role'] !== 'admin') {
+		header("Location: ../index.php");
+	}
+}
+
+?>
+
+<?php
+
 	include "../includes/db.php";
 	include "functions.php";
 

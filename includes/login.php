@@ -2,6 +2,14 @@
 
 <?php
 
+// Starting a session for loged in users
+
+session_start();
+
+?>
+
+<?php
+
 	if(isset($_POST['login'])) {
 
 		//	Grabbing login data and setting to variables
@@ -32,11 +40,17 @@
 			$db_user_role = $row['user_role'];
 		}
 
-		//	Validation Rules
+		//	Validation Rules and creating login sessions for registered users
 		if($username !== $db_username && $password !== $db_user_password ){
 			header('Location: ../index.php');
 		}
 		else if($username == $db_username && $password == $db_user_password ){
+
+			$_SESSION['user_name'] = $db_username;
+			$_SESSION['user_first_name'] = $db_user_first_name;
+			$_SESSION['user_last_name'] = $db_user_last_name;
+			$_SESSION['user_role'] = $db_user_role;
+
 			header('Location: ../dashboard');
 		}
 		else{

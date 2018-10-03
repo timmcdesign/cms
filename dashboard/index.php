@@ -20,7 +20,11 @@ include "includes/admin-header.php";
 
 						<h1 class="page-header">
 							Dashboard
-							<small>Welcome</small>
+							<small>Welcome
+								<?php
+								//	This will display a loged in users first name to personalise the login screen
+								echo $_SESSION['user_first_name']; ?>
+							</small>
 						</h1>
 						<ol class="breadcrumb">
 							<li>
