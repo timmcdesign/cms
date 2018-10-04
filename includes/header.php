@@ -4,7 +4,7 @@
 
 //	Enable php warnings and errors
 
-	include_once ("../includes/php_config.php");
+	include_once ("php_config.php");
 
  ?>
 
