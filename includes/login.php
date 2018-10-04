@@ -41,10 +41,9 @@ session_start();
 		}
 
 		//	Validation Rules and creating login sessions for registered users
-		if($username !== $db_username && $password !== $db_user_password ){
-			header('Location: ../index.php');
-		}
-		else if($username == $db_username && $password == $db_user_password ){
+		//	( === means the data must match exactly )
+
+		if($username === $db_username && $password === $db_user_password ){
 
 			$_SESSION['user_name'] = $db_username;
 			$_SESSION['user_first_name'] = $db_user_first_name;
