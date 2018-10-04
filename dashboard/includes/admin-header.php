@@ -1,25 +1,26 @@
 
 <?php
 
-//	Enable php warnings and errors
+	//	Enable php warnings and errors
 
-	include_once ("../includes/php_config.php");
+		include_once ("../includes/php_config.php");
 
-//	This is required to buffer function requests used in scripts.
+	//	This is required to buffer function requests used in scripts.
 
-ob_start(); ?>
+	ob_start(); ?>
 
 <?php
 
-//	This is to start a session for loged in users and check their user_role is valid
+	//	This is to start an initial session on the website
 
-session_start();
+	session_start();
 
-if(isset($_SESSION['user_role'])){
-	if($_SESSION['user_role'] !== 'admin') {
+	//	This will prevent visitors from seeing the admin page,
+	//	by first checking if the session global has any logged values set
+
+	if(!isset($_SESSION['user_role'])){
 		header("Location: ../index.php");
 	}
-}
 
 ?>
 

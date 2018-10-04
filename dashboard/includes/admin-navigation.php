@@ -23,7 +23,7 @@
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+							<a href="../includes/logout.php"><i class="fas fa-sign-out-alt"></i>Log Out</a>
 						</li>
 					</ul>
 				</li>

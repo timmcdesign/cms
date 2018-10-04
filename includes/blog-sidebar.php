@@ -47,7 +47,11 @@
 	</div>
 
 	<!-- Login Form -->
-
+	<?php
+		//	if(){
+		//		echo "Fail";
+		//	}
+	?>
 	<div class="well">
 		<h4>Account Login</h4>
 		<form action="includes/login.php" method="post">
