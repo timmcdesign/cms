@@ -28,7 +28,7 @@ include "includes/admin-footer.php";
 							$username = '';
 							$user_name = '';
 							if(isset($_POST['update_profile'])) {
-								if($username === $user_name || ){
+								if($username === $user_name){
 									echo "<div class='alert alert-success' role='alert'>Profile has been  Successfully Updated</div>";
 								}
 							}
@@ -132,7 +132,10 @@ include "includes/admin-footer.php";
 								<div class="col-lg-6" style="padding-left:0px;">
 									<div class="form-group">
 										<label for="user_name">Username:</label>
-										<input class="form-control" type="text" name="user_name" value="<?= $user_name; ?>">
+
+										<!-- Field has been made read only to prevent update profile from breaking. Could also be set as hidden and form re-structured. -->
+
+										<input class="form-control" type="text" name="user_name" value="<?= $user_name; ?>" readonly>
 									</div>
 								</div>
 								<div class="col-lg-6" style="padding-left:0px;">
