@@ -17,7 +17,7 @@
 		$post_status = $row['post_status'];
 		$post_image = $row['post_image'];
 		$post_tags = $row['post_tags'];
-		$post_comments = $row['post_comments'];
+		$post_comment_count = $row['post_comment_count'];
 		$post_date = $row['post_date'];
 	}
 
@@ -72,7 +72,7 @@
 		$update_post = mysqli_query($connection, $query);
 }?>
 
-<div class="col-lg-9 admin-header">
+<div class="col-lg-12 admin-header">
 	<h1 class="page-header">Edit Post</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 	<form class="create-post-form" action="" method="post" enctype="multipart/form-data">
 	<!--  The enctype attribute above specifies how form-data should be encoded when submitted to your server  -->

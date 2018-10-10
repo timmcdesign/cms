@@ -23,7 +23,7 @@
 
 ?>
 
-<div class="col-lg-9 admin-header">
+<div class="col-lg-12 admin-header">
 <h1 class="page-header">Add user</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 
 <form class="create-user-form" action="" method="post" enctype="multipart/form-data">

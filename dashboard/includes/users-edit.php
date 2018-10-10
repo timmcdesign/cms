@@ -53,7 +53,7 @@
 
 ?>
 
-<div class="col-lg-9 admin-header">
+<div class="col-lg-12 admin-header">
 <h1 class="page-header">Update user</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 
 <?php if(isset($_POST['edit_user'])) {
