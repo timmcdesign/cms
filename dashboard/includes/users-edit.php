@@ -28,13 +28,13 @@
 
 		$user_image = $_FILES['user-image']['name'];
 		$user_image_temp = $_FILES['user-image']['tmp_name'];
-		$user_old_image = $_POST['user-image-old'];
+		//	$user_old_image = $_POST['user-image-old'];
 
 		move_uploaded_file($user_image_temp, "../images/$user_image");
 
-		if(empty($user_image)){
-			$user_image = $user_old_image;
-		}
+		//	if(empty($user_image)){
+		//		$user_image = $user_old_image;
+		//	}
 
 		$query = "UPDATE users SET
 		user_name = '{$user_name}',
@@ -45,8 +45,6 @@
 		user_role = '{$user_role}',
 		user_image = '{$user_image}'
 		WHERE user_id = $the_user_id";
-
-		echo "<pre>".print_r($query,true)."</pre>";
 
 		$create_user_query = mysqli_query($connection, $query);
 
