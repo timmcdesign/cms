@@ -201,8 +201,8 @@
 								['Data', 'How Many'],
 								<?php
 
-									$graph_text = ['Posts', 'Categories', 'Users', 'Comments'];
-									$graph_count = [$post_count, $category_count, $user_count, $comment_count];
+									$graph_text = ['Posts', 'Comments', 'Users', 'Categories'];
+									$graph_count = [$post_count, $comment_count, $user_count, $category_count];
 
 									//	This loop is creating the javascript required display the grapheme_extract
 									/*	Example		['Year', 'Sales', 'Expenses', 'Profit'],
