@@ -30,20 +30,18 @@
 					// Note - Added conditon of only showing based on post_status condition in the DB
 
 					$query = "SELECT * FROM posts";
-					$select_all_posts_query = mysqli_query($connection,$query);
-
-					while($row = mysqli_fetch_array($select_all_posts_query)){
+					$select_all_posts_query = mysqli_query($connection, $query);
+					while ($row = mysqli_fetch_array($select_all_posts_query)) {
 						$post_title = $row['post_title'];
 						$post_id = $row['post_id'];
 						$post_author = $row['post_author'];
 						$post_date = $row['post_date'];
 						$post_image = $row['post_image'];
-						$post_content = substr($row['post_content'],0,180);	// This code limits the nuber of characters by 180
+						$post_content = substr($row['post_content'], 0, 180);	// This code limits the nuber of characters by 180
 						$post_status = $row['post_status'];
 
-
-						if($post_status == 'published'){
-					?>
+						if ($post_status == 'published') {
+							?>
 
 					<!-- First Blog Post -->
 
@@ -70,10 +68,17 @@
 
 				<?php
 						//	Here is where the while loop is turned off!!!!
-						}
-						else {
+						} else {
 							// echo "No posts to display yet, please check back later.";
 						}
+					}
+
+					$query = "SELECT * FROM posts WHERE post_status = 'published'";
+					$select_all_published_posts = mysqli_query($connection, $query);
+					$published_post_count = mysqli_num_rows($select_all_published_posts);
+
+					if ($published_post_count == '0') {
+						echo "<p>No posts to display</p>";
 					}
 				?>
 
