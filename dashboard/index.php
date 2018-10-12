@@ -50,7 +50,6 @@
 
 															$query = "SELECT * FROM posts";
 															$select_all_posts = mysqli_query($connection, $query);
-
 															$post_count = mysqli_num_rows($select_all_posts);
 
 														 ?>
@@ -84,7 +83,6 @@
 
 															$query = "SELECT * FROM comments";
 															$select_all_comments = mysqli_query($connection, $query);
-
 															$comment_count = mysqli_num_rows($select_all_comments);
 
 														 ?>
@@ -118,7 +116,6 @@
 
 															$query = "SELECT * FROM users";
 															$select_all_users = mysqli_query($connection, $query);
-
 															$user_count = mysqli_num_rows($select_all_users);
 
 														 ?>
@@ -152,7 +149,6 @@
 
 															$query = "SELECT * FROM categories";
 															$select_all_categories = mysqli_query($connection, $query);
-
 															$category_count = mysqli_num_rows($select_all_categories);
 
 														 ?>
@@ -179,11 +175,42 @@
 
 				<?php
 
-				?>
+					//	Pulling Unique values from DB using Column Data
+
+					$query = "SELECT * FROM posts WHERE post_status = 'draft' ";
+					$select_all_draft_posts = mysqli_query($connection, $query);
+					$draft_post_count = mysqli_num_rows($select_all_draft_posts);
+
+					$query = "SELECT * FROM posts WHERE post_status = 'published' ";
+					$select_all_published_posts = mysqli_query($connection, $query);
+					$published_post_count = mysqli_num_rows($select_all_published_posts);
+
+					$query = "SELECT * FROM comments WHERE comment_status = 'approved' ";
+					$select_all_approved_comments = mysqli_query($connection, $query);
+					$approved_comment_count = mysqli_num_rows($select_all_approved_comments);
+
+					$query = "SELECT * FROM comments WHERE comment_status = 'unapproved' ";
+					$select_all_pending_comments = mysqli_query($connection, $query);
+					$pending_comment_count = mysqli_num_rows($select_all_pending_comments);
+
+					$query = "SELECT * FROM comments WHERE comment_status = 'rejected' ";
+					$select_all_rejected_comments = mysqli_query($connection, $query);
+					$rejected_comment_count = mysqli_num_rows($select_all_rejected_comments);
+
+					$query = "SELECT * FROM users WHERE user_role = 'subscriber' ";
+					$select_all_subscrined_userss = mysqli_query($connection, $query);
+					$subscribed_user_count = mysqli_num_rows($select_all_subscrined_userss);
+
+					$query = "SELECT * FROM users WHERE user_role = 'admin' ";
+					$select_all_admin_users = mysqli_query($connection, $query);
+					$admin_user_count = mysqli_num_rows($select_all_admin_users);
+
+				 ?>
+
 
 				<!-- Google Charts Bar Graph Script and HTML -->
 
-				<div class="row">
+				<div class="row chart">
 					<div class="col-lg-12">
 						<style>
 							legend: {position: 'none'};
@@ -201,8 +228,8 @@
 								['Data', 'How Many'],
 								<?php
 
-									$graph_text = ['Posts', 'Comments', 'Users', 'Categories'];
-									$graph_count = [$post_count, $comment_count, $user_count, $category_count];
+									$graph_text = ['Published Posts', 'Draft Posts', 'Approved Comments', 'Pending Comments', 'Rejected Comments', 'Admin Users', 'Subscribers', 'Categories'];
+									$graph_count = [$published_post_count, $draft_post_count, $approved_comment_count, $pending_comment_count, $rejected_comment_count, $admin_user_count, $subscribed_user_count, $category_count];
 
 									//	This loop is creating the javascript required display the grapheme_extract
 									/*	Example		['Year', 'Sales', 'Expenses', 'Profit'],
@@ -216,7 +243,7 @@
 									//	and to incrementaly display each array value until the array ends.
 									//	the google chart then reads the loop the exact same as the above
 
-									for($i =0; $i < 4; $i++) {
+									for($i =0; $i < 8; $i++) {
 										echo "['{$graph_text[$i]}'" . "," . "{$graph_count[$i]}],";
 									}
 								?>
@@ -235,7 +262,7 @@
 						}
 						</script>
 					</div>
-					<div id="columnchart_material" style="width:auto; height: 450px;"></div>
+					<div id="columnchart_material"></div>
 
 				</div>
 

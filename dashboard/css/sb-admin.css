@@ -4,6 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 /* Global Styles */
+
 body {
 	margin-top: 100px;
 	background-color: #222;
@@ -49,11 +50,27 @@ h1.page-header{
 		height: 100%;
 		height: -moz-available;          /* WebKit-based browsers will ignore this. */
 		height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-		height: fill-available;
+		height: 100%;
 	}
 }
 
+/* Dashboard CSS - Chart */
+
+.row.chart{
+	margin:0px !important;
+}
+
+#columnchart_material{
+	margin-top:20px;
+	padding:40px 20px 20px ;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin width:auto;
+	height: 400px;
+}
+
 /* Top Navigation */
+
 .top-nav {
 	padding: 0 15px;
 }
@@ -125,6 +142,7 @@ ul.alert-dropdown {
 }
 
 /* Side Navigation */
+
 @media(min-width:768px) {
 	.side-nav {
 		position: fixed;
