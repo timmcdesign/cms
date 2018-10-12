@@ -8,8 +8,10 @@ body {
 	padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-footer {
-	margin: 50px 0;
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
 .home, .post {
@@ -20,4 +22,71 @@ footer {
 	line-height: 1.8em;
 	font-size: 15px;
 	margin-bottom: 20px;
+}
+
+/* Forms */
+
+.well{
+	background: #fff;
+}
+
+.input-group .form-control, .form-group input, .form-group input.form-control{
+	background-color: #fbfbfb !important;
+}
+
+/* Login Page */
+
+body.login-page {
+	background: #f1f1f1;
+}
+
+.login-page form {
+	width:100%;
+	margin:0px;
+}
+
+.login-page .well{
+	padding:22px 20px 9px 20px;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+.login-page input[type='checkbox']{
+	margin-top: 10px;
+}
+
+.login-page input{
+	background: #fbfbfb;
+}
+
+.login-page label{
+	font-weight: normal;
+	color: #888;
+}
+
+.login-page .login-wrapper {
+	margin: 8% auto 0px;
+	max-width: 320px;
+}
+
+.login-form h4{
+	margin-top:0px;
+	margin-bottom:20px;
+}
+
+.login-page .lost-password, .login-page .login-back{
+	margin:15px 0px 0px 20px;
+}
+
+/* Footer */
+.home.container hr{
+	margin-bottom:0px;
+}
+
+footer {
+	margin: 15px 0px 50px;
+}
+
+.footer-wrapper p{
+	display: inline;
 }

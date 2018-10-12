@@ -18,8 +18,8 @@ include "includes/admin-footer.php";
 
 				<!-- Page Heading -->
 				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="page-header">Categories</h1>
+					<div class="col-lg-12 admin-header">
+						<h1 class="page-header">Categories</h1><a class="btn btn-secondary admin-back" onclick="goBack()">< Go Back</a>
 
 						<!-- Categories Form  -->
 						<div class="col-xs-6">

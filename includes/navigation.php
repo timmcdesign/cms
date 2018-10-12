@@ -27,7 +27,6 @@
 
 
 				 ?>
-				<li><a href='dashboard'>admin</a></li>
 			</ul>
 		</div>
 

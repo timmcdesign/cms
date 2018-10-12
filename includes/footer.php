@@ -1,8 +1,8 @@
 <!-- Footer -->
 <footer>
 	<div class="row">
-		<div class="col-lg-12">
-			<p>Copyright &copy; 2018</p>
+		<div class="footer-wrapper col-lg-12 clearfix">
+			<p>Copyright &copy; 2018</p><a href="account.php" class="pull-right">Account Login</a></p>
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>

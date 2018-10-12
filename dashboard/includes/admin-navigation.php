@@ -14,12 +14,10 @@
 
 			<!-- Top Menu Items -->
 			<ul class="nav navbar-right top-nav">
-				<li><a href="../index.php">Homepage</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle burger-menu" data-toggle="dropdown"><i class="fas fa-bars fa-lg"></i></a>
+				<li class="dropdown"><a class="dropdown-toggle burger-menu" data-toggle="dropdown" href="#">Logged in as <?php echo $_SESSION['user_first_name']; ?></a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="#"><i class="fas fa-user"></i>Profile</a>
+							<a href="profile.php"><i class="fas fa-user"></i>Profile</a>
 						</li>
 						<li class="divider"></li>
 						<li>
@@ -28,6 +26,8 @@
 					</ul>
 				</li>
 			</ul>
+
+
 
 
 			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->

@@ -23,6 +23,15 @@ body {
 	width: 100%;
 	padding: 0;
 	background-color: #fff;
+	padding: 20px;
+}
+
+h1.page-header{
+	margin: 0px 0 20px;
+}
+
+.container-fluid{
+	padding:0px;
 }
 
 .huge {
@@ -36,7 +45,11 @@ body {
 	}
 
 	#page-wrapper {
-		padding: 10px;
+		padding: 30px;
+		height: 100%;
+		height: -moz-available;          /* WebKit-based browsers will ignore this. */
+		height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+		height: fill-available;
 	}
 }
 
@@ -243,7 +256,6 @@ i {
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin-top: 35px;
 }
 
 @media(max-width:1200px) {
