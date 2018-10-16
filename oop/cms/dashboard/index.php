@@ -1,43 +1,51 @@
-<?php include("includes/header.php"); ?>
+<?php
 
-		<!-- Navigation -->
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	if($_SESSION['user_name'] === $db_username){
+		include("/dashboard/includes/navigation-top.php");
+	}
 
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<?php include("includes/navigation-top.php"); ?>
+	include("includes/header.php");
 
-			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-			<<?php include("includes/navigation-sidebar.php") ?>
+?>
 
-		</nav>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-		<div id="page-wrapper">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<?php include("includes/navigation-top.php"); ?>
 
-			<div class="container-fluid">
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<<?php include("includes/navigation-sidebar.php") ?>
 
-				<!-- Page Heading -->
-				<div class="row">
-					<div class="col-lg-12">
+	</nav>
 
-							<?php include("includes/admin-content.php") ?>
+	<div id="page-wrapper">
 
-						<h1 class="page-header">
-							Dashboard<small> Subheading</small>
-						</h1>
-						<ol class="breadcrumb">
-							<li>
-								<i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
-							</li>
-							<li class="active">
-								<i class="fa fa-file"></i> Dashboard
-							</li>
-						</ol>
-					</div>
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<div class="row">
+				<div class="col-lg-12">
+
+						<?php include("includes/admin-content.php") ?>
+
+					<h1 class="page-header">
+						Dashboard<small> Subheading</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
+						</li>
+						<li class="active">
+							<i class="fa fa-file"></i> Dashboard
+						</li>
+					</ol>
 				</div>
-
-				<!-- Content area -->
 			</div>
 
+			<!-- Content area -->
 		</div>
 
-  <?php include("includes/footer.php"); ?>
+	</div>
+
+<?php include("includes/footer.php"); ?>

@@ -1,6 +1,7 @@
 <?php
 
 	//	Database Class Creation
+
 	//	1 - Define Database class
 
 	require_once("config.php");
