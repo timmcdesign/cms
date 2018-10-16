@@ -1,3 +1,10 @@
+<?php
+//	Output Buffering On
+ob_start();
+
+//	Include Db Config Initialize 
+include("init.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
