@@ -19,9 +19,6 @@
 					<li>
 						<a href="#">Services</a>
 					</li>
-					<li>
-						<a href="dashboard">Dashboard</a>
-					</li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
