@@ -34,6 +34,8 @@
 				</div>
 			</div>
 
+			<?php include("includes/admin_content.php") ?>
+
 			<!-- Content area -->
 		</div>
 

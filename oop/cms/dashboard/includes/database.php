@@ -24,9 +24,31 @@
 				die("Database connection failed - " .  mysqli_error());
 			}
 		}
+
+	//	7 - Creating a query function to use for future classes - Public using mysqli_query and returning the result
+
+	public function query($query) {
+		$result = mysqli_query($this->connection, $query);
+		return $result;
 	}
 
-	//	7 - Creating initial Database Class
+	// 8 - Creati ng a query to confirm query connection
+
+	private function confirm_query($result){
+		if(!$result){
+			die("Query Failed") . mysqli_error();
+		}
+	}
+
+	// 9 - Escape string function
+
+	public function escape_string($string){
+		$escaped_string = mysqli_real_escape_string($this->connection, $string);
+		return $escaped_string;
+	}
+
+	}
+	//	10 - Creating initial Database Class
 
 	$dbh = new Database();
 
