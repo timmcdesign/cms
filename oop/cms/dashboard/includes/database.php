@@ -28,6 +28,6 @@
 
 	//	7 - Creating initial Database Class
 
-	$database = new Database();
+	$dbh = new Database();
 
  ?>

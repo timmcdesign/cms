@@ -40,5 +40,3 @@ include("init.php"); ?>
 <body>
 
 <div id="wrapper">
-
-<?php include("php_config.php") ?>
