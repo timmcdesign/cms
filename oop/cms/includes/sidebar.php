@@ -1,56 +1,57 @@
 
-<!--BlogSearchWell-->
-<divclass="well">
-	<h4>BlogSearch</h4>
-	<divclass="input-group">
-			<inputtype="text"class="form-control">
-			<spanclass="input-group-btn">
-				<buttonclass="btnbtn-default"type="button">
-					<spanclass="glyphiconglyphicon-search"></span>
-			</button>
-			</span>
-	</div>
-	<!--/.input-group-->
-</div>
 
-<!--BlogCategoriesWell-->
+		<!-- Blog Search Well -->
+				<div class="well">
+						<h4>Blog Search</h4>
+						<div class="input-group">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+										<button class="btn btn-default" type="button">
+												<span class="glyphicon glyphicon-search"></span>
+								</button>
+								</span>
+						</div>
+						<!-- /.input-group -->
+				</div>
+
+				<!-- Blog Categories Well -->
 <div class="well">
-	<h4>BlogCategories</h4>
-	<divclass="row">
-			<divclass="col-lg-6">
-				<ulclass="list-unstyled">
-					<li><ahref="#">CategoryName</a>
-					</li>
-					<li><ahref="#">CategoryName</a>
-					</li>
-					<li><ahref="#">CategoryName</a>
-					</li>
-					<li><ahref="#">CategoryName</a>
-					</li>
-				</ul>
-			</div>
-			<!--/.col-lg-6-->
-			<divclass="col-lg-6">
-				<ulclass="list-unstyled">
-					<li><ahref="#">CategoryName</a>
-					</li>
-					<li><ahref="#">CategoryName</a>
-					</li>
-					<li><ahref="#">CategoryName</a>
-					</li>
-					<li><ahref="#">CategoryName</a>
-					</li>
-				</ul>
-			</div>
-			<!--/.col-lg-6-->
-	</div>
-	<!--/.row-->
-</div>
+						<h4>Blog Categories</h4>
+						<div class="row">
+								<div class="col-lg-6">
+										<ul class="list-unstyled">
+												<li><a href="#">Category Name</a>
+												</li>
+												<li><a href="#">Category Name</a>
+												</li>
+												<li><a href="#">Category Name</a>
+												</li>
+												<li><a href="#">Category Name</a>
+												</li>
+										</ul>
+								</div>
+								<!-- /.col-lg-6 -->
+								<div class="col-lg-6">
+										<ul class="list-unstyled">
+												<li><a href="#">Category Name</a>
+												</li>
+												<li><a href="#">Category Name</a>
+												</li>
+												<li><a href="#">Category Name</a>
+												</li>
+												<li><a href="#">Category Name</a>
+												</li>
+										</ul>
+								</div>
+								<!-- /.col-lg-6 -->
+						</div>
+						<!-- /.row -->
+				</div>
 
-<!--SideWidgetWell-->
-<div class="well">
-	<h4>SideWidgetWell</h4>
-	<p>Loremipsumdolorsitamet,consecteturadipisicingelit.Inventore,perspiciatisadipisciaccusamuslaudantiumoditaliquamrepellattemporequosaspernaturvero.</p>
-</div>
+				<!-- Side Widget Well -->
+				<div class="well">
+						<h4>Side Widget Well</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+				</div>
 
-</div>
+		</div>
