@@ -1,8 +1,4 @@
-<?php
-
-	include("includes/header.php");
-
-?>
+<?php include("includes/header.php"); ?>
 
 	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -26,11 +22,13 @@
 					<h1 class="page-header">
 						Dashboard<small> Subheading</small>
 					</h1>
+
 					<ol class="breadcrumb">
 						<li class="active">
 							<i class="fa fa-dashboard"></i>  Dashboard
 						</li>
 					</ol>
+
 				</div>
 			</div>
 
